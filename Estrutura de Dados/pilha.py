@@ -1,7 +1,7 @@
 
 #Push --> Insere elementos ao final
 #Pop --> Retira o ultimo elemento
-#Peek --> Vê o elemento do topo
+#Top --> Vê o elemento do topo
 #FILO --> First In, Last Out
 
 class Pilha:
@@ -23,7 +23,7 @@ class Pilha:
             self.len_stack -= 1
         
         
-    def Peek(self): #Peek, olha o ultimo elemento que foi colocado
+    def Top(self): #Top, olha o ultimo elemento que foi colocado
         if self.empty:
             return None
             
