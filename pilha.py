@@ -9,30 +9,33 @@ class Pilha:
     
     def __init__(self):
         self.pilha = []
+        self.len_stack = 0
         
         
         
     def push(self, e):
-        self.stack.append(e)
+        self.pilha.append(e)
+        self.len_stack += 1
         
     def pop(self):
-        if self.empty:
-            self.stack.pop(len(self.stack) - 1)
+        if not self.empty:
+            self.pilha.pop(self.len_stack - 1)
+            self.len_stack -= 1
         
         
     def Peek(self): #Peek, olha o ultimo elemento que foi colocado
         if self.empty:
             return None
             
-        return self.stack[-1]
+        return self.pilha[-1]
     
     
     def empty(self):
-        if len(self.stack) == 0:
+        if self.len_stack == 0:
             return True
         else: 
             return False
         
         
     def length(self):
-        return len(self.stack)
+        return self.len_stack
