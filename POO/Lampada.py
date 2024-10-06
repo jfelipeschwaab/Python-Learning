@@ -34,12 +34,38 @@ class Lampada:
         
         
         
+        
+        
 abajur1 = Lampada()
 
-while True:
-    abajur1.acoes()
+
+
     
-    abajur1.mostrar_status()
+    
+class Abajur(Lampada):
+    def __init__(self, modelo):
+        super().__init__()
+        self.modelo = modelo
+        self.preco = 1000
+
+    
+    def minha_marca(self):
+        print("Minha marca é: " + str(self.modelo))
+        
+    def acoes(self):
+        super().acoes()
+        print("Meu método de ações é top")
+    
+
+
+meu_abajur = Abajur("LG")
+meu_abajur.mostrar_status()
+meu_abajur.minha_marca()
+meu_abajur.acoes()
+meu_abajur.mostrar_status()
+
+
+
     
 
             
