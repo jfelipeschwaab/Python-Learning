@@ -55,6 +55,10 @@ class Abajur(Lampada):
     def acoes(self):
         super().acoes()
         print("Meu método de ações é top")
+        
+    @staticmethod
+    def meu_metodo_estatico():
+        print("Este é um método estático")
     
 
 
@@ -64,7 +68,7 @@ meu_abajur.minha_marca()
 meu_abajur.acoes()
 meu_abajur.mostrar_status()
 
-
+Abajur.meu_metodo_estatico()
 
     
 
